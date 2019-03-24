@@ -21,7 +21,8 @@ public class FlightStepdefinition {
 	
 	@Given("^I visit travells sight$")
 	public void i_visit_travells_sight() throws Exception {
-		System.setProperty("webdriver.chrome.driver", "C:\\Users\\srinath\\Desktop\\chromedriver.exe");
+		String projectpath= System.getProperty("user.dir");
+		System.setProperty("webdriver.chrome.driver",projectpath +"\\Drivers\\chromedriver.exe");
 		WebDriver driver= new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(25, TimeUnit.SECONDS);
